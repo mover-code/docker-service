@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    container_name: ipfs
+    volumes:
+      - ./file:/root/file
+      - ./ipfs_data:/root/ipfs
+    ports:
+      - '4001:4001'
+      - '4001:4001/udp'
+      - '8080:8080'
+      - '5001:5001'
