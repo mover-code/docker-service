@@ -1,31 +1,53 @@
-# Docker-compose configuration
+<h1 align="center">BlockScout</h1>
+<p align="center">Blockchain Explorer for inspecting and analyzing EVM Chains.</p>
+<div align="center">
 
-Runs BlockScout locally in Docker container with usage [docker-compose](https://github.com/docker/compose).
+[![Blockscout](https://github.com/blockscout/blockscout/workflows/Blockscout/badge.svg?branch=master)](https://github.com/blockscout/blockscout/actions) [![Join the chat at https://gitter.im/poanetwork/blockscout](https://badges.gitter.im/poanetwork/blockscout.svg)](https://gitter.im/poanetwork/blockscout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Prerequisites
-- Docker v20.10+
-- Docker-compose 2.x.x+
-- Running Ethereum JSON RPC client
+</div>
 
-## Building Docker containers from source
-```
-docker-compose up --build
-```
+BlockScout provides a comprehensive, easy-to-use interface for users to view, confirm, and inspect transactions on EVM (Ethereum Virtual Machine) blockchains. This includes the POA Network, xDai Chain, Ethereum Classic and other **Ethereum testnets, private networks and sidechains**.
 
-This command uses by-default `docker-compose.yml`, which build the explorer into Docker image and runs 2 Docker containers:
-- one for the database. Postgres 13.x, which will be available at port 7432 on localhost
-- and the BlockScout explorer at http://localhost:4000
+See our [project documentation](https://docs.blockscout.com/) for detailed information and setup instructions.
 
-## Configs for different Ethereum clients
-Also, the repo contains built-in configs for different clients without need to build the image
-- Ganache: `docker-compose -f docker-compose-no-build-ganache.yml up -d`
-- HardHat network: `docker-compose -f docker-compose-no-build-hardhat-network.yml up -d`
-- Geth: `docker-compose -f docker-compose-no-build-geth.yml up -d`
-- OpenEthereum, Nethermind: `docker-compose -f docker-compose-no-build-open-ethereum-nethermind up -d`
-- Running only explorer without DB: `docker-compose -f docker-compose-no-build-no-db-container.yml up -d`. In this case, one container is created - for the explorer itself. And it assumes that the DB credentials are provided through `DATABASE_URL` environment variable.
+Visit the [POA BlockScout forum](https://forum.poa.network/c/blockscout) for FAQs, troubleshooting, and other BlockScout related items. You can also post and answer questions here.
 
-All of the configs assume, that the Ethereum JSON RPC is running at http://localhost:8545.
+You can also access the dev chatroom on our [Gitter Channel](https://gitter.im/poanetwork/blockscout).
 
-In order to stop launched containers, run `docker-compose -d -f config_file.yml down`, where replace `config_file.yml` with the file name of the config, which has been launched before.
+## About BlockScout
 
-You can play with the BlockScout environment variables, which are present at `./envs/common-blockscout.env`. The description of the environment variables are available in [the docs](https://docs.blockscout.com/for-developers/information-and-settings/env-variables).
+BlockScout is an Elixir application that allows users to search transactions, view accounts and balances, and verify smart contracts on the Ethereum network including all forks and sidechains.
+
+Currently available full-featured block explorers (Etherscan, Etherchain, Blockchair) are closed systems which are not independently verifiable.  As Ethereum sidechains continue to proliferate in both private and public settings, transparent, open-source tools are needed to analyze and validate transactions.
+
+## Supported Projects
+
+BlockScout supports a number of projects. Hosted instances include POA Network, xDai Chain, Ethereum Classic, Sokol & Kovan testnets, and other EVM chains. 
+
+- [List of hosted mainnets, testnets, and additional chains using BlockScout](https://docs.blockscout.com/for-projects/supported-projects)
+- [Hosted instance versions](https://docs.blockscout.com/about/use-cases/hosted-blockscout)
+
+
+## Getting Started
+
+See the [project documentation](https://docs.blockscout.com/) for instructions:
+- [Requirements](https://docs.blockscout.com/for-developers/information-and-settings/requirements)
+- [Ansible deployment](https://docs.blockscout.com/for-developers/ansible-deployment)
+- [Manual deployment](https://docs.blockscout.com/for-developers/manual-deployment)
+- [ENV variables](https://docs.blockscout.com/for-developers/information-and-settings/env-variables)
+- [Configuration options](https://docs.blockscout.com/for-developers/configuration-options)
+
+
+## Acknowledgements
+
+We would like to thank the [EthPrize foundation](http://ethprize.io/) for their funding support.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and pull request protocol. We expect contributors to follow our [code of conduct](CODE_OF_CONDUCT.md) when submitting code or comments.
+
+## License
+
+[![License: GPL v3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
