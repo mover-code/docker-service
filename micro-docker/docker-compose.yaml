@@ -99,6 +99,8 @@ services:
     restart: always
     networks:
       - backend
+    # volumes:
+    #   - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     ports:
       - "5601:5601"
     depends_on:
@@ -273,3 +275,24 @@ services:
   #   networks:
   #     - backend
   # restart: always
+
+  kafka-manager: # Kafka 图形管理界面
+    image: sheepkiller/kafka-manager:latest
+    restart: unless-stopped
+    container_name: kafka-manager
+    hostname: kafka-manager
+    networks:
+      - backend
+    ports:
+      - "9000:9000"
+    links:            # 连接本compose文件创建的container
+      - kafka
+    external_links:   # 连接外部compose文件创建的container
+      - zookeeper
+    # volumes:
+    #   - ./kafka/application.conf:/kafka-manager-1.3.1.8/conf/application.conf
+    environment:
+      ZK_HOSTS: zookeeper:2181
+      KAFKA_BROKERS: kafka:9092
+    depends_on:
+      - zookeeper
