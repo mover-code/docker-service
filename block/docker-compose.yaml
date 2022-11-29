@@ -1,0 +1,49 @@
+version: '3.5'
+
+services:
+  blockChain:
+    # 自定义容器名称
+    container_name: blockChain
+    image: 9981212/chain:latest
+    volumes:
+      # 设置挂载目录
+      - ./data:/home/chain/data # 引用 .env 配置中 CODE_PATH_HOST 变量，将宿主机上代码存放的目录挂载到容器中 /usr/src/code 目录
+      - ./conf:/home/chain/conf
+    ports:
+      # 设置端口映射  8545 8546 30303 30303/
+      - "8101:8545"
+      - "8102:8546"
+      - "30303:30303"
+      - "32668:32668"
+    stdin_open: true # 打开标准输入，可以接受外部输入
+    tty: true
+    restart: always # 指定容器退出后的重启策略为始终重启
+
+  db:
+    image: postgres:13.6
+    restart: always
+    container_name: 'postgres'
+    environment:
+        POSTGRES_PASSWORD: ''
+        POSTGRES_USER: 'postgres'
+        POSTGRES_HOST_AUTH_METHOD: 'trust'
+    ports:
+      - 7432:5432
+
+  blockscout:
+    depends_on:
+      - db
+      - blockChain
+    image: blockscout/blockscout:latest
+    restart: always
+    container_name: 'blockscout'
+    links:
+      - db:database
+    command: 'mix do ecto.create, ecto.migrate, phx.server'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    env_file:
+      -  ./envs/common.env
+    ports:
+      - 4000:4000
+
