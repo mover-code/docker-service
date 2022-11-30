@@ -1,21 +1,25 @@
-# golang web server docker-compose config
+# build for yourself blockchain and expoler for this chain
 
-## init project
+## First need init chain
 
-``` shell
-    pwd :micro-docker   docker-compose up -d
+```sehll
+geth init conf/genesion.json --datadir path 
 ```
 
-## .env config param
+please change this config for yourself
 
-## repair error for something
+## Then maybe you can run it
 
-### 1. elasticsearch can not start
-
-``` shell
-chmod -R 777 static data path
+```shell
+docker-compose up -d
 ```
 
-### 2. kafka create topic
+## Last start mint
 
-use kafka-manager : localhost:9000
+geth attach data/geth.ipc
+
+```sehll
+miner.start()
+```
+
+## Finally enjoy it
