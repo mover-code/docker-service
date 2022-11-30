@@ -52,7 +52,7 @@ GraphQLVirtualHosts = ["localhost"]
 
 
 [Node.P2P]
-MaxPeers = 50
+MaxPeers = 2
 NoDiscovery = false
 StaticNodes = []
 

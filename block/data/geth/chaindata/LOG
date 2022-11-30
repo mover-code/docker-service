@@ -1,0 +1,75 @@
+=============== Nov 29, 2022 (CST) ===============
+19:09:10.298006 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:09:10.300088 db@open opening
+19:09:10.300435 version@stat F·[] S·0B[] Sc·[]
+19:09:10.301638 db@janitor F·2 G·0
+19:09:10.301653 db@open done T·1.55503ms
+19:09:10.302341 db@close closing
+19:09:10.302373 db@close done T·31.342µs
+=============== Nov 29, 2022 (CST) ===============
+19:09:14.591599 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:09:14.591703 version@stat F·[] S·0B[] Sc·[]
+19:09:14.591715 db@open opening
+19:09:14.591739 journal@recovery F·1
+19:09:14.593478 journal@recovery recovering @1
+19:09:14.595130 memdb@flush created L0@2 N·22 S·16KiB "6\x15\xf6..=4\xb5,v12":"\xc9!(..|\xe4\xe8,v11"
+19:09:14.596702 version@stat F·[1] S·16KiB[16KiB] Sc·[0.25]
+19:09:14.599963 db@janitor F·3 G·0
+19:09:14.599973 db@open done T·8.253402ms
+19:10:29.271171 db@close closing
+19:10:29.271205 db@close done T·34.698µs
+=============== Nov 29, 2022 (UTC) ===============
+11:10:37.271918 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:10:37.272025 version@stat F·[1] S·16KiB[16KiB] Sc·[0.25]
+11:10:37.272037 db@open opening
+11:10:37.272065 journal@recovery F·1
+11:10:37.273774 journal@recovery recovering @3
+11:10:37.275821 memdb@flush created L0@5 N·98 S·5KiB "\a\x1b\x01..\x12I\xb5,v113":"\xf2\x9f\xbd..6\xfd4,v102"
+11:10:37.277458 version@stat F·[2] S·21KiB[21KiB] Sc·[0.50]
+11:10:37.280744 db@janitor F·4 G·0
+11:10:37.280757 db@open done T·8.715239ms
+=============== Nov 29, 2022 (UTC) ===============
+11:20:49.609011 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:20:49.609108 version@stat F·[2] S·21KiB[21KiB] Sc·[0.50]
+11:20:49.609119 db@open opening
+11:20:49.609149 journal@recovery F·1
+11:20:49.610765 journal@recovery recovering @6
+11:20:49.613053 version@stat F·[2] S·21KiB[21KiB] Sc·[0.50]
+11:20:49.616443 db@janitor F·4 G·0
+11:20:49.616472 db@open done T·7.336364ms
+=============== Nov 29, 2022 (UTC) ===============
+11:21:25.217221 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:21:25.217367 version@stat F·[2] S·21KiB[21KiB] Sc·[0.50]
+11:21:25.217382 db@open opening
+11:21:25.217417 journal@recovery F·1
+11:21:25.218905 journal@recovery recovering @8
+11:21:25.221448 version@stat F·[2] S·21KiB[21KiB] Sc·[0.50]
+11:21:25.224920 db@janitor F·4 G·0
+11:21:25.224931 db@open done T·7.544173ms
+=============== Nov 30, 2022 (UTC) ===============
+01:52:07.534155 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:52:07.534272 version@stat F·[2] S·21KiB[21KiB] Sc·[0.50]
+01:52:07.534291 db@open opening
+01:52:07.534339 journal@recovery F·1
+01:52:07.536164 journal@recovery recovering @10
+01:52:07.538446 memdb@flush created L0@12 N·82 S·3KiB "H:\x82..\x12\x10N,v180":"r\x00\x00..\x18`U,v200"
+01:52:07.540175 version@stat F·[3] S·25KiB[25KiB] Sc·[0.75]
+01:52:07.544614 db@janitor F·5 G·0
+01:52:07.544628 db@open done T·10.324702ms
+=============== Nov 30, 2022 (UTC) ===============
+02:40:47.297459 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:40:47.297818 version@stat F·[3] S·25KiB[25KiB] Sc·[0.75]
+02:40:47.297832 db@open opening
+02:40:47.297865 journal@recovery F·1
+02:40:47.299524 journal@recovery recovering @13
+02:40:47.307175 memdb@flush created L0@15 N·4225 S·217KiB "H\x00F..\xfch\x13,v3416":"r\x00\x00..%\x1dE,v4426"
+02:40:47.308754 version@stat F·[4] S·243KiB[243KiB] Sc·[1.00]
+02:40:47.312264 db@janitor F·6 G·0
+02:40:47.312275 db@open done T·14.438647ms
+02:40:47.312307 table@compaction L0·4 -> L1·0 S·243KiB Q·4431
+02:40:47.317252 table@build created L1@18 N·2961 S·186KiB "\a\x1b\x01..\x12I\xb5,v113":"\xf2\x9f\xbd..6\xfd4,v102"
+02:40:47.317277 version@stat F·[0 1] S·186KiB[0B 186KiB] Sc·[0.00 0.00]
+02:40:47.318446 table@compaction committed F-3 S-57KiB Ke·0 D·1466 T·6.110674ms
+02:40:47.318602 table@remove removed @12
+02:40:47.318617 table@remove removed @5
+02:40:47.318629 table@remove removed @2

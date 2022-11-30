@@ -1,0 +1,9 @@
+02:00:33.267 [debug] Current global API rate limit 50 reqs/sec
+02:00:33.267 [debug] Current API rate limit by key 50 reqs/sec
+02:00:33.267 [debug] Current API rate limit by IP 50 reqs/sec
+02:11:10.770 [debug] Current global API rate limit 50 reqs/sec
+02:11:10.770 [debug] Current API rate limit by key 50 reqs/sec
+02:11:10.770 [debug] Current API rate limit by IP 50 reqs/sec
+02:55:29.229 [debug] Current global API rate limit 50 reqs/sec
+02:55:29.229 [debug] Current API rate limit by key 50 reqs/sec
+02:55:29.229 [debug] Current API rate limit by IP 50 reqs/sec
