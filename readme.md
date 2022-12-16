@@ -1,4 +1,10 @@
-# golang web server docker-compose config
+# 分支介绍
+
+- master golang micro service docker-compose 组件服务
+- block golang block chain and block expoler 组件服务
+- ipfs golang ipfs 组件服务
+  
+## golang web server docker-compose config
 
 ## init project
 
