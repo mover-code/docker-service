@@ -42,11 +42,11 @@ HTTPHost = "0.0.0.0"
 HTTPPort = 8545
 HTTPCors = ["*"]
 HTTPVirtualHosts = ["*"]
-HTTPModules = ['eth', 'net', 'web3']
+HTTPModules = ['eth', 'net', 'web3', 'debug']
 
 WSHost = "0.0.0.0"
 WSPort = 8546
-WSModules = ['eth', 'net', 'web3']
+WSModules = ['eth', 'net', 'web3', 'debug']
 
 GraphQLVirtualHosts = ["localhost"]
 

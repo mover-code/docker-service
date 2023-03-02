@@ -7,7 +7,7 @@ services:
   blockChain:
     # 自定义容器名称
     container_name: blockChain
-    image: 9981212/chain:12306
+    image: 981212/chain:12306
     volumes:
       # 设置挂载目录
       - ./data:/home/chain/data # 引用 .env 配置中 CODE_PATH_HOST 变量，将宿主机上代码存放的目录挂载到容器中 /usr/src/code 目录
